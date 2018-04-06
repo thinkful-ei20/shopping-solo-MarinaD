@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Shopping List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Shopping List</h1>
+        <form id="js-shopping-list-form">
+            <label for="shopping-list-entry">Add an item</label>
+            <input type="text" name="shopping-list-entry" class="js-shopping-list-entry" placeholder="e.g., broccoli">
+            <button type="submit">Add item</button>
+        </form>
+
+        <form id="js-search">
+            <label for="searchList">Search your list</label>
+            <input type="text" name="searchList" class="js-search-query" placeholder="your search term">
+            <button type="submit">Search</button>
+            <button class="js-clear">Clear</button>
+        </form>
+
+        <p>
+        <lable for="toggleChecked">
+          <input class="js-checked-filter"type="checkbox" id="toggleChecked" name="checkedItems" value="checkedItems">
+        </lable> Hide all checked items?</p>
+        <ul class="shopping-list js-shopping-list">
+        </ul>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
