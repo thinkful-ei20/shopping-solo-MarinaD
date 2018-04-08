@@ -103,7 +103,6 @@ function renderShoppingList() {
 
   //check if on nocheckeditems
   if (currentFilter === 'noCheckedItems'){
-    console.log('no checked items filter selected');
     STORE.filteredItems=STORE.items.filter((item)=> item.checked === false);
   }
 
@@ -128,7 +127,6 @@ function addItemToShoppingList(itemName) {
 function handleNewItemSubmit() {
   $('#js-shopping-list-form').submit(function(event) {
     event.preventDefault();
-    console.log('`handleNewItemSubmit` ran');
     const newItemName = $('.js-shopping-list-entry').val();
     $('.js-shopping-list-entry').val('');
     addItemToShoppingList(newItemName);
@@ -152,7 +150,6 @@ function getItemIndexFromElement(item) {
 //listen to the 'check' button on all the shopping list items, grab the index of the item checked, use helper function to update STORE and render to the DOM
 function handleItemCheckClicked() {
   $('.js-shopping-list').on('click', '.js-item-toggle', event => {
-    console.log('`handleItemCheckClicked` ran');
     const itemIndex = getItemIndexFromElement(event.currentTarget);
     toggleCheckedForListItem(itemIndex);
     renderShoppingList();
