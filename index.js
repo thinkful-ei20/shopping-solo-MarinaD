@@ -14,6 +14,19 @@ const STORE = {
   filteredItems: [],
 };
 
+//CLEAR ALL FILTERS
+function handleClear() {
+  $('.js-clear').on('click', () => {
+    //clear search query and checkbox
+    $('body').find('.js-search-query').val('');
+    $('body').find('#toggleChecked').attr('checked', false);
+
+    setFilter('noFilter');
+    renderShoppingList();
+    console.log('handleClear ran');
+  });
+}
+
 //HANDLE EDITING
 
 //listen for submission of the edit button, change the STORE and render the new shopping list
@@ -185,7 +198,7 @@ function handleShoppingList() {
   handleDeleteItemClicked();
   handleFilter();
   handleSearch();
-  // handleClear();
+  handleClear();
   handleEdit();
 }
 
